@@ -16,25 +16,24 @@ export default function App() {
   const nav = [
     { path: "/ParentWithoutUseCallback", name: "Example without useCallback" },
     { path: "/Example-Memo", name: "Example with memo" },
-    { path: "/Example-useCallback", name: "Example with useCallback" }
+    { path: "/Example-useCallback", name: "Example with useCallback" },
+    { path: "/", name: "Home" }
   ];
   const NavElements = nav.map((items, index) => (
-    <button key={index}>
-      <Link key={index} to={items.path}>
-        {items.name}
-      </Link>
-    </button>
+    <Link key={index} to={items.path}>
+      <button key={index}>{items.name}</button>
+    </Link>
   ));
   return (
     <Router>
       <div className="App">
-        {NavElements}
+        <div style={{ display: "flex", flexWrap: "wrap" }}>{NavElements}</div>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <h1>Hello CodeSandbox</h1>
+                <h1>Welcome to React tutorials</h1>
                 <h2>Root Element</h2>
               </>
             }
