@@ -10,7 +10,8 @@ export const ParentComponent = () => {
     <div>
       <div>parent count:{count}</div>
       <div>
-        <Child handleClick={handleClick} />
+        <button onClick={handleClick}>click</button>
+        <Child />
       </div>
     </div>
   );
