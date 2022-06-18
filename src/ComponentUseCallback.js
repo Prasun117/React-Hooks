@@ -9,6 +9,7 @@ export function ComponentUseCallbackParent() {
   console.log("Parent Component", count);
   return (
     <div>
+      <div>With UseCallback</div>
       <div>Parent count: {count}</div>
       <div>
         <ChildComponentUseCallback

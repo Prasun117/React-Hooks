@@ -2,6 +2,7 @@ import "./styles.css";
 import { useState } from "react";
 import { ParentComponent } from "./ParentComponent";
 import { ComponentUseCallbackParent } from "./ComponentUseCallback";
+import { ParentWithoutUseCallback } from "./Example-Without-useCallback/ParentWithoutUseCallback";
 export default function App() {
   const [data, setData] = useState();
 
@@ -15,7 +16,8 @@ export default function App() {
       <h2>Root Element</h2>
       {/* <button onClick={handleChange}>Click me</button>
       <ParentComponent /> */}
-      <ComponentUseCallbackParent />
+      {/* <ComponentUseCallbackParent /> */}
+      <ParentWithoutUseCallback />
     </div>
   );
 }
